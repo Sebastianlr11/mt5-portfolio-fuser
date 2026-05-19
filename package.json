@@ -3,6 +3,29 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "description": "Fuse multiple MetaTrader 5 strategy reports into a unified portfolio dashboard with 30+ professional quant metrics.",
+  "author": "Sebastianlr11",
+  "license": "MIT",
+  "homepage": "https://sebastianlr11.github.io/mt5-portfolio-fuser/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sebastianlr11/mt5-portfolio-fuser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sebastianlr11/mt5-portfolio-fuser/issues"
+  },
+  "keywords": [
+    "metatrader5",
+    "mt5",
+    "trading",
+    "portfolio",
+    "backtesting",
+    "quantitative-finance",
+    "algorithmic-trading",
+    "react",
+    "vite",
+    "typescript"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
