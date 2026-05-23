@@ -14,7 +14,7 @@ import { EquityPoint } from '../logic/types';
 
 interface Props { data: EquityPoint[] }
 
-const EQUITY_COLOR = '#10b981';
+const EQUITY_COLOR = '#00d9ff';
 
 /* ── Formatters ──────────────────────────────────────────────────────────── */
 const fmtUSD = (v: number): string => {
@@ -48,7 +48,7 @@ const EquityTooltip = ({ active, payload }: any) => {
 
     return (
         <div style={{
-            background: 'rgba(6, 11, 18, 0.92)',
+            background: 'rgba(10, 10, 10, 0.94)',
             backdropFilter: 'blur(14px)',
             WebkitBackdropFilter: 'blur(14px)',
             border: '1px solid rgba(255,255,255,0.08)',
@@ -165,7 +165,7 @@ export const EquityChart: React.FC<Props> = ({ data }) => {
                         strokeWidth={1.8}
                         fill="url(#gradEq)"
                         dot={false}
-                        activeDot={{ r: 4, fill: EQUITY_COLOR, stroke: '#060b12', strokeWidth: 2 }}
+                        activeDot={{ r: 4, fill: EQUITY_COLOR, stroke: '#0a0a0a', strokeWidth: 2 }}
                         isAnimationActive={data.length < 2000}
                         animationDuration={800}
                     />

@@ -199,7 +199,7 @@ export default function App() {
                         <motion.div
                             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
                             className="fixed inset-0 z-40 flex items-center justify-center pointer-events-none"
-                            style={{ background: 'rgba(0,214,143,0.04)' }}
+                            style={{ background: 'rgba(0,217,255,0.03)' }}
                         >
                             <div className="border-2 border-dashed border-primary/40 rounded-3xl p-16 text-center">
                                 <Upload className="w-12 h-12 text-primary/60 mx-auto mb-3" />
@@ -308,7 +308,7 @@ function Dashboard({ stats, equityCurve }: {
             sub: `${stats.tradingDays}d · ${stats.totalTrades.toLocaleString()} trades`,
             icon: pos ? TrendingUp : TrendingDown,
             color: pos ? 'green' : 'red',
-            glow: pos ? 'rgba(16,185,129,0.7)' : 'rgba(239,68,68,0.7)',
+            glow: pos ? 'rgba(0,217,255,0.6)' : 'rgba(251,90,111,0.6)',
         },
         {
             label: 'Win Rate',
@@ -316,7 +316,7 @@ function Dashboard({ stats, equityCurve }: {
             sub: `${stats.wins}W · ${stats.losses}L`,
             icon: Percent,
             color: stats.winRate >= 50 ? 'green' : 'red',
-            glow: stats.winRate >= 50 ? 'rgba(16,185,129,0.7)' : 'rgba(239,68,68,0.7)',
+            glow: stats.winRate >= 50 ? 'rgba(0,217,255,0.6)' : 'rgba(251,90,111,0.6)',
         },
         {
             label: 'Profit Factor',
@@ -324,7 +324,7 @@ function Dashboard({ stats, equityCurve }: {
             sub: pf >= 1.5 ? 'Excelente' : pf >= 1 ? 'Aceptable' : 'Bajo',
             icon: Target,
             color: pf >= 1.5 ? 'green' : pf >= 1 ? 'amber' : 'red',
-            glow: pf >= 1.5 ? 'rgba(16,185,129,0.7)' : pf >= 1 ? 'rgba(245,158,11,0.7)' : 'rgba(239,68,68,0.7)',
+            glow: pf >= 1.5 ? 'rgba(0,217,255,0.6)' : pf >= 1 ? 'rgba(251,191,36,0.6)' : 'rgba(251,90,111,0.6)',
         },
         {
             label: 'Max Drawdown',
@@ -332,7 +332,7 @@ function Dashboard({ stats, equityCurve }: {
             sub: `-$${Math.abs(stats.maxDrawdown).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`,
             icon: Shield,
             color: dd < 10 ? 'green' : dd < 20 ? 'amber' : 'red',
-            glow: dd < 10 ? 'rgba(16,185,129,0.7)' : dd < 20 ? 'rgba(245,158,11,0.7)' : 'rgba(239,68,68,0.7)',
+            glow: dd < 10 ? 'rgba(0,217,255,0.6)' : dd < 20 ? 'rgba(251,191,36,0.6)' : 'rgba(251,90,111,0.6)',
         },
     ] as const;
 
