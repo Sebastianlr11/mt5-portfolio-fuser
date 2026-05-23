@@ -2,7 +2,7 @@ import React, { useState, useMemo, useCallback, useRef } from 'react';
 import {
     Zap, Upload, Download, FileText,
     CheckCircle2, AlertCircle, Loader2,
-    TrendingUp, TrendingDown, Target, Percent, Shield, X
+    TrendingUp, TrendingDown, Target, Percent, Shield, X, Map
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Trade, BotMapping } from './logic/types';
@@ -134,6 +134,19 @@ export default function App() {
 
                 {/* Actions */}
                 <div className="flex items-center gap-2.5">
+                    {/* Botón: cargar mapeo de magic numbers */}
+                    <label className={`relative flex items-center gap-2 h-9 px-4 rounded-lg border text-xs font-bold cursor-pointer transition-all
+                        ${mapping.size > 0
+                            ? 'bg-secondary/10 border-secondary/30 text-secondary/80 hover:bg-secondary/15'
+                            : 'bg-surface2 border-border hover:border-secondary/40 hover:text-secondary text-muted'
+                        }`}>
+                        <Map className="w-3.5 h-3.5" />
+                        {mapping.size > 0 ? `Mapeo · ${mapping.size}` : 'Mapeo'}
+                        <input type="file" accept=".html,.htm,.csv,.json,.chr" className="hidden"
+                            onChange={handleFileInput} />
+                    </label>
+
+                    {/* Botón: importar reportes HTML */}
                     <label className={`flex items-center gap-2 h-9 px-4 rounded-lg border text-xs font-bold cursor-pointer transition-all
                         ${processing
                             ? 'bg-surface2 border-border text-muted cursor-not-allowed'
